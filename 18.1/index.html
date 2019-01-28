@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div id="test">
+		<div>
+			<label for="name">您的名字是：{{name}}</label><br>
+			<input type="text" v-model="name" placeholder="姓名">
+		</div>
+		<div>
+			<span style="color: red">您的性别是：{{gender}}</span><br>
+			<input type="text" v-model="gender" placeholder="性别">
+		</div>
+	</div>
+	<script src="https://cdn.bootcss.com/vue/2.5.16/vue.js"></script>
+	<script src="./js/main.js"></script>
+</body>
+</html>

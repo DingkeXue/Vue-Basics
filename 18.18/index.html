@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.panel {
+			padding: 10px;
+			max-width: 300px auto;
+			border: 1px solid #999;
+			margin-bottom: 20px;
+		}
+		.panel >* {
+			padding: 15px;
+		}
+		.panel .title {
+			border-bottom: 1px solid #999;
+		}
+		.panel .footer {
+			border-top: 1px solid #999;
+		}
+		a {
+			text-decoration: none;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="app">
+		<panel>
+			<div slot="title">便捷</div>
+			<div slot="footer"><a href="http://www.baidu.com">点击我查看详情</a></div>
+		</panel>
+		<panel>
+			<div slot="content">便捷和安全，是移动支付的要义。在安全性方面，华为自研的麒麟芯片实现了主芯片与安全芯片的统一，确保了芯片级的安全保障，Huawei Pay 目前也通过国际上严苛的 PCI DSS 支付安全认证，为移动支付提供了严格的安全保证便捷和安全，是移动支付的要义。在安全性方面，华为自研的麒麟芯片实现了主芯片与安全芯片的统一，确保了芯片级的安全保障，Huawei Pay 目前也通过国际上严苛的 PCI DSS 支付安全认证，为移动支付提供了严格的安全保证</div>
+		</panel>
+	</div>
+	<template id="panel-tpl">
+		<div class="panel">
+			<div class="title">
+				<slot name=title>安全</slot>
+			</div>
+			<div class="content">
+				<slot name="content">便捷和安全，是移动支付的要义。在安全性方面，华为自研的麒麟芯片实现了主芯片与安全芯片的统一，确保了芯片级的安全保障，Huawei Pay 目前也通过国际上严苛的 PCI DSS 支付安全认证，为移动支付提供了严格的安全保证</slot>
+			</div>
+			<div class="footer">
+				<slot name="footer">更多信息</slot>
+			</div>
+		</div>
+	</template>
+	<script src="https://cdn.bootcss.com/vue/2.5.16/vue.js"></script>
+	<script src="main.js"></script>
+</body>
+</html>

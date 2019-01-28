@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.1.1/css/bootstrap.css">
+	<title>Document</title>
+</head>
+<body>
+	<div id="test">
+		<button v-on="{mouseenter: onEnter, mouseleave: onLeave}" @click='onClick' class="btn btn-danger">点我</button>
+		<form @keydown.enter="onEntered" @submit.prevent='onSubmit'>
+			<input type="text">
+			<button class="btn btn-primary" type='submit'>提交</button>
+		</form>
+	</div>
+	<script src="https://cdn.bootcss.com/vue/2.5.16/vue.js"></script>
+	<script src="./js/main.js"></script>
+</body>
+</html>

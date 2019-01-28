@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<div id="app">
+    <like></like>
+</div>
+<div id="test">
+    <kick></kick>
+    <alert></alert>
+</div>
+
+<template id="like-tpl">
+    <button @click="toggle_like()">点赞{{like_count}}</button>
+</template>
+<template id="alert-tpl">
+    <button @click="toggle()">点我</button>
+    <button @click="toggle_like()">点赞</button>
+</template>
+<template id="kick-tpl">
+    <button @click="toggle_kick()">点一点</button>
+</template>
+<script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.js"></script>
+<script src="main.js"></script>
+</body>
+</html>

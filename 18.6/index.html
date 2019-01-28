@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div id="test">
+		<!-- <label>
+			male
+			<input v-model='sex' value="male" type="radio">
+		</label>
+		<label>
+			female
+			<input v-model="sex" value="female" type="radio">
+		</label> -->
+		<div>请选择您的籍贯：</div>
+		<select v-model="from">
+			<option value="1">四川</option>
+			<option value="2">河南</option>
+			<option value="3">北京</option>
+		</select>
+		<div>请选择您心仪的城市（可多选）</div>
+		<select v-model="from" multiple>
+			<option value="1">四川</option>
+			<option value="2">河南</option>
+			<option value="3">北京</option>
+		</select>
+	</div>
+	<script src="https://cdn.bootcss.com/vue/2.5.16/vue.js"></script>
+	<script src="./js/main.js"></script>
+</body>
+</html>
